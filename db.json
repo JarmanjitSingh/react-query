@@ -1,19 +1,45 @@
 {
-    "superheroes": [
-      {
-        "id": 1,
-        "name": "Batman",
-        "alterEgo": "Bruce Wayne"
-      },
-      {
-        "id": 2,
-        "name": "Superman",
-        "alterEgo": "Clark Kent"
-      },
-      {
-        "id": 3,
-        "name": "Wonder Woman",
-        "alterEgo": "Princess Diana"
-      }
-    ]
-  }
+  "superheroes": [
+    {
+      "id": 1,
+      "name": "Batman",
+      "alterEgo": "Bruce Wayne"
+    },
+    {
+      "id": 2,
+      "name": "Superman",
+      "alterEgo": "Clark Kent"
+    },
+    {
+      "id": 3,
+      "name": "Wonder Woman",
+      "alterEgo": "Princess Diana"
+    }
+  ],
+  "freinds": [
+    {
+      "id": 1,
+      "name": "Jarman"
+    },
+    {
+      "id": 2,
+      "name": "Amrit"
+    },
+    {
+      "id": 3,
+      "name": "Anmol"
+    }
+  ],
+  "users": [
+    {
+      "id": "jarmanjit@gmail.com",
+      "channelId": "codewithjarman"
+    }
+  ],
+  "channels": [
+    {
+      "id": "codewithjarman",
+      "courses": ["React", "vue", "angular"]
+    }
+  ]
+}

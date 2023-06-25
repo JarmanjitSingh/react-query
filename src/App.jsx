@@ -7,6 +7,9 @@ import SuperHerosPage from "./components/superHerosPage";
 import RQSuperHerosPage from "./components/RQSuperHerosPage";
 import SecondSameQuery from "./components/SecondSameQuery";
 import HeroDetailPage from "./components/HeroDetailPage";
+import ParallelQueriesPage from "./components/ParallelQueriesPage";
+import DynamicParallelQueriesPage from "./components/DynamicParallelQueriesPage";
+import DependentQueriesPage from "./components/DependentQueriesPage";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +39,9 @@ const App = () => {
           <Route path="/rq-super-heroes" element={<RQSuperHerosPage />} />
           <Route path="/second-same-query" element={<SecondSameQuery />} />
           <Route path="/hero-detail/:id" element={<HeroDetailPage />} />
+          <Route path="/parallel-queries" element={<ParallelQueriesPage />} />
+          <Route path="/dynamic-parallel-queries" element={<DynamicParallelQueriesPage heroIds={[1, 3]} />} />
+          <Route path="/dependent-queries" element={<DependentQueriesPage email="jarmanjit@gmail.com" />} />
         </Routes>
       </Router>
       <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />

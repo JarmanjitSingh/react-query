@@ -75,3 +75,21 @@ now we are fetching all data but showing only heroname so with the select proper
    const id = queryKey[1]
    return axios.get(`http://localhost:4000/superheroes/${id}`);
    };
+
+#Parallel Queries - (two queries in one component)
+1. make new component for parallel queries
+2. make a new array of freinds in the db
+3. add two queries in the component so the question how to handle both datas and other properties so we can do that with aliases like data: freinds and data: superheros
+
+#dynamic parallel queries 
+(suppose you are selecting the multiple superheros from the table and want to fetch multiple superheros then use useQueries )
+1. make a new component for dynamkc parallel queries
+2. set the path of the component and the two fixed ids of component recieves in the app componentb and you can recieve this in dynamicParallel component
+3. use useQueries hook first you can map on the ids then return object first key of object is query id and second is the function and this useQuery returns the queryResults so log it in console
+
+#dependent Queries 
+(suppose if want to fetch second query based on the first result)
+1. add two more datas in db users and channels.
+2. create dependent queries component which will recieve the hard coded email from app component as a prop
+3. then fetching as previous and destructuring data as alias user and store it in the variable of channel id with condition if user ? then .data.channelId
+4.after that we can write the second query but it will executed as when the component mounted so we can use the enabled property with double negation channel id it will convert the value to the boolean which is what the enabled property expects
