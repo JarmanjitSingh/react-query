@@ -6,6 +6,7 @@ import HomePage from "./components/HomePage";
 import SuperHerosPage from "./components/superHerosPage";
 import RQSuperHerosPage from "./components/RQSuperHerosPage";
 import SecondSameQuery from "./components/SecondSameQuery";
+import HeroDetailPage from "./components/HeroDetailPage";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/super-heroes" element={<SuperHerosPage />} />
           <Route path="/rq-super-heroes" element={<RQSuperHerosPage />} />
           <Route path="/second-same-query" element={<SecondSameQuery />} />
+          <Route path="/hero-detail/:id" element={<HeroDetailPage />} />
         </Routes>
       </Router>
       <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
