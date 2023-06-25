@@ -47,3 +47,9 @@ note: the caching time calculate when you leave the page where data will be fetc
 #Data Transformation
 now we are fetching all data but showing only heroname so with the select property we can only recieve a array of hero names and then able to map only on it this is called data transformation 
 
+#Custom Query hook -- (if we want to use same query in multiple component then dont want to refetch same data again)
+1. create a separate hooks folder > create a file for the query filename starts with use
+2. cut and paste useQuery hook in the function and return it.
+3. onError and onsuccess function passsed as an argument for different component and now we can use it multiple times.
+
+
