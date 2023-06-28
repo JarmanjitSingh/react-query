@@ -93,3 +93,17 @@ now we are fetching all data but showing only heroname so with the select proper
 2. create dependent queries component which will recieve the hard coded email from app component as a prop
 3. then fetching as previous and destructuring data as alias user and store it in the variable of channel id with condition if user ? then .data.channelId
 4.after that we can write the second query but it will executed as when the component mounted so we can use the enabled property with double negation channel id it will convert the value to the boolean which is what the enabled property expects
+
+
+#Initial query data -- useQueryClient
+
+for eg. if i fetched a allPolicies data then we fetched a single policy data then we saw a loading text even we fetched all policies so with it we can initial show the data from all policies. this all about query we dont need to touch component.
+1. import and call useQueryClient hook in the useSuperHerosData.js .
+2. in the object of query we have a initialData property and this is a function and passed the key of exisiting data of super-heros in the getQueryData
+
+
+
+
+
+
+
