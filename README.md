@@ -111,7 +111,15 @@ for eg. if i fetched a allPolicies data then we fetched a single policy data the
 6. your are noticing when user click on next then it shows loading text so for outcome from this we can pass in the useQuery the object of property keepPreviousData is true now when you click on the next button it will showing the same page data untill the data has been fetched.
 7. if you want to showing loading below it then you can using the isFetching like below the buttons {isFetching && "loading"}
 
-
+#Infinite Queries - useInfiniteQuery
+1. setup a new page like the pagination page without prev, next button and useState,
+2. import and use useInfiniteQuery hook instead of useQuery 
+3. destructure pageParam in the fetch function and set its default value 1
+4. in options the property getNextPageParam is a function which receives two parameters lastPage and pages. we dont need lastPage param so we write underscore in starting like _lastPage and write a some login in this function.
+5. getNextPageParam function gives us a propery hasNextPage which will be true or false so we can destructure it
+6. add a load more button which is disabled when !hasNextPage and onclick it we can call fetchNextPage we can destructure it
+7. for showing fetching text we can destructure two more properties isFetching and isFetchingNextPage
+8. hit this url rq-infinte you can see the error because useInfiniteQuery is gives us a data in different way so we can use data?pages and in map function instead of color we have group and index
 
 
 
