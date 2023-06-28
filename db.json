@@ -41,5 +41,39 @@
       "id": "codewithjarman",
       "courses": ["React", "vue", "angular"]
     }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "label": "green"
+    },
+    {
+      "id": 2,
+      "label": "white"
+    },
+    {
+      "id": 3,
+      "label": "orange"
+    },
+    {
+      "id": 4,
+      "label": "yellow"
+    },
+    {
+      "id": 5,
+      "label": "purple"
+    },
+    {
+      "id": 6,
+      "label": "blue"
+    },
+    {
+      "id": 7,
+      "label": "violet"
+    },
+    {
+      "id": 8,
+      "label": "black"
+    }
   ]
 }

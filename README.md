@@ -101,6 +101,16 @@ for eg. if i fetched a allPolicies data then we fetched a single policy data the
 1. import and call useQueryClient hook in the useSuperHerosData.js .
 2. in the object of query we have a initialData property and this is a function and passed the key of exisiting data of super-heros in the getQueryData
 
+#Paginated Queries
+1. setup a colors array of object in the db.json
+2. make a component PaginatedQueriesPage. make a query and hit the rq-paginated path now we need to do pagination .
+3. we need to know that the json server is supporting the pagination out of the box.
+ like http://localhost:4000/colors?_limit=2&_page=1
+4. now we need to maintain a page state so using useState hook and passed to a query in array of key and number.
+5. add previous and next buttons
+6. your are noticing when user click on next then it shows loading text so for outcome from this we can pass in the useQuery the object of property keepPreviousData is true now when you click on the next button it will showing the same page data untill the data has been fetched.
+7. if you want to showing loading below it then you can using the isFetching like below the buttons {isFetching && "loading"}
+
 
 
 
