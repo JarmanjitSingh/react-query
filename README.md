@@ -131,5 +131,10 @@ for eg. if i fetched a allPolicies data then we fetched a single policy data the
 7. add the fetch button below it so the added data can desplayed after add.
 8. note:- this also return the same values like useQuery hook of isLoading, isError, error etc
 
+#Query Invalidation
+in above we need to refetch manually when user added. but we want when mutation success then automatic refetch the super-heros key
+1. in the useSuperHerosData query in the mutation function you can call the useQueryClient hook. that will holds the key
+2. so the object as the second argument of the mutation hook we can onsuccess property that will be a function here we can use client hook . query  invalidation and pass it the key of query who we want to fetch
+
 
 
