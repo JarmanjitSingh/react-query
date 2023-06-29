@@ -14,6 +14,16 @@
       "id": 3,
       "name": "Wonder Woman",
       "alterEgo": "Princess Diana"
+    },
+    {
+      "name": "spider man",
+      "alterEgo": "the makdi ka jala",
+      "id": 4
+    },
+    {
+      "name": "spider man",
+      "alterEgo": "makdi ka jala 2",
+      "id": 5
     }
   ],
   "freinds": [
@@ -39,7 +49,11 @@
   "channels": [
     {
       "id": "codewithjarman",
-      "courses": ["React", "vue", "angular"]
+      "courses": [
+        "React",
+        "vue",
+        "angular"
+      ]
     }
   ],
   "colors": [

@@ -121,7 +121,15 @@ for eg. if i fetched a allPolicies data then we fetched a single policy data the
 7. for showing fetching text we can destructure two more properties isFetching and isFetchingNextPage
 8. hit this url rq-infinte you can see the error because useInfiniteQuery is gives us a data in different way so we can use data?pages and in map function instead of color we have group and index
 
-
+#Mutations -- useMutation hook -- for create,update and delete data
+1. some code setup in the RQsuperherospage. NOTE:- json server also support post requests and write db files
+2. now go the the useSuperHerosData hook and import useMutation and make a new function for it. and pass it the function that make the post request.
+3. now you can able to import and use it in the component. so it will return the many values but we can destructure mutate from it that will actually call the hook 
+4. in the handleAddHeroClick make a variable and store the name and alterego in the object and the pass that variable in the mutate function.
+5. Note :- if there is many mutations than u can use alias like mutate: addHero 
+6. now go to the browser and this will add the data in the db. 
+7. add the fetch button below it so the added data can desplayed after add.
+8. note:- this also return the same values like useQuery hook of isLoading, isError, error etc
 
 
 
