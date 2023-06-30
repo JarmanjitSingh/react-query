@@ -24,6 +24,16 @@
       "name": "spider man",
       "alterEgo": "makdi ka jala 2",
       "id": 5
+    },
+    {
+      "name": "Iron man",
+      "alterEgo": "loha",
+      "id": 6
+    },
+    {
+      "name": "Hulk",
+      "alterEgo": "The green man",
+      "id": 7
     }
   ],
   "freinds": [
