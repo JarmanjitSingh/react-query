@@ -34,6 +34,11 @@
       "name": "Hulk",
       "alterEgo": "The green man",
       "id": 7
+    },
+    {
+      "name": "Aqua Man",
+      "alterEgo": "the water man",
+      "id": 8
     }
   ],
   "freinds": [

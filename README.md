@@ -148,6 +148,31 @@ the second argument is a function that automatically receives the old data as an
 5.so we have to change data property so we have a key data: [...oldQueryData.data, data.data] this will append the mutation response request data at the last of the superheros data
 Note: it saves the one additional request. now its also possible for you to take this one step further by making use of optimistic updates lets take a look at this in next.
 
+# Optimistic Updates
+
+optimistic updates - updating the state before performing a mutation under the assumption that nothing can go wrong. Though you do have to cater to scenarios where the mutation can in fact error out managing optimistic updates is typically not so straightforward. lets understand how it works with our super-heros example
+
+1. comment out the onsuccess callback instead we need three other callbacks onMutate, onError, onSetteled.
+2. onMutate function is called before the mutation function is fired and it passed the same variables the mutation function would recieves in our can newHero we want to add,
+
+within the function the first thing we want to do is any outgoing refetches so they dont overwrite our optimistic update using cancelQueries() method on queryClient instance and the query we want to cancel super-heros query but this needs to be awaited so add async await,
+
+next we need to get of the current query data before we make any update this will help us roll back in case the mutation fails and to get hold of the current query data we use the getQuery() method on the queryClient instance
+(i.e we can getting the super-heros query caching data so if mutation fails then the cached data shown imdiatelly)
+
+so now there will be all set to update previous query data and we have already seen this how to do it above with setQuery data so we can copy paste from above code.
+
+here we can use newHero.data instead of data.data but if we can look at the response we can only have the name alterEgo we dont have an id so we can write here own logic to add id. keep in mind that our id just a sequence number if you have a long unique id you should probably use the uuid package to generate the id 
+
+so we have now updated our list of heros even before the post request
+
+from this on mutate function though we are going to return a object with key value set to previous hero data this will be used to roll back data 
+
+3. onError function this function is called if the mutation encounters the error. it will recieves the three arguments first is error we dont use it so we can add underscore _error the second argument is the variables passed into the mutation which would be hero name and alter ego so we also write it as _hero, and the third argument is the context which contains the additional information pertaining to the mutation.
+with context, queryClient and setQueryData method we can set the previous data
+
+4. onSetteled function called if mutation either successfull or encounters error in this function all we have to do is refetch the superheros 
+this will ensure the client state will in sync with the server state
 
 
 
