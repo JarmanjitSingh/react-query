@@ -174,5 +174,15 @@ with context, queryClient and setQueryData method we can set the previous data
 4. onSetteled function called if mutation either successfull or encounters error in this function all we have to do is refetch the superheros 
 this will ensure the client state will in sync with the server state
 
+# Axios Interceptor
+
+let see how to use axios interceptor with react query. now let me point out that react query has nothing to do with axios interceptor however when using axios network requests it is pretty common to have a base url the beta token in the header custom error handling etc
+
+1. create a utils folder within this create a file axios-utils.js import axios and create axios client
+2. define and exports a function that wraps all the axios requests. the function accepts all the options that axios accepts so we can spread options object as a parameter. 
+3.within the function we set an auth bearer token. ofcourse here token is the string token but in your app you might probabaly fetch it from the local storage.
+4. next we define the success callback. similarly the error callback. 
+5. finally we return the client passing in the options and attaching the callbacks. we now have our interceptor ready
+6. lets make use of this in superheros query and mutation. in useSuperHerosData.js import request function instead of axios
 
 
